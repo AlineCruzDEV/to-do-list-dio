@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">My Tasks</string>
-    <string name="label_splash_what_do_first">O que eu tenho para fazer hoje?</string>
+    <string name="label_splash_what_do_first">Por onde devo começar?</string>
     <string name="message_splash_description_image">Desenho de uma pessoa com uma caneta em frente à uma prancheta com tarefas</string>
+    <string name="label_home_title">Tarefas de Hoje</string>
+    <string name="label_all_lorem_ipsum">Lorem Ipsum</string>
+    <string name="label_sample_data_hour">00/00/0000 00:00</string>
+    <string name="label_home_fab_add_task">Adicionar Tarefa</string>
 </resources>

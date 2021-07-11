@@ -13,5 +13,16 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //setupRecycler()
+        //setupListener()
+    }
+
+    private fun setupListener() {
+        TODO("Not yet implemented")
+    }
+
+    private fun setupRecycler() {
+        TODO("Not yet implemented")
     }
 }
