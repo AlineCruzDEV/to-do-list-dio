@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Tasks</string>
+    <string name="label_splash_what_do_first">O que eu tenho para fazer hoje?</string>
+    <string name="message_splash_description_image">Desenho de uma pessoa com uma caneta em frente à uma prancheta com tarefas</string>
+</resources>
