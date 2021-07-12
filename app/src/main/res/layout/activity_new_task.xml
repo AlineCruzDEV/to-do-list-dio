@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,17 +10,17 @@
         android:id="@+id/appBarNewTask"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarNewTask"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:titleTextColor="@color/white"
-            app:title="@string/label_new_task"/>
+            app:title="@string/label_new_task"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -124,9 +123,9 @@
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_8dp"
         android:text="@string/label_all_cancel"
         android:textAllCaps="false"
-        android:layout_marginBottom="@dimen/dimen_8dp"
         app:layout_constraintBottom_toTopOf="@id/buttonNewTaskCreate"
         app:layout_constraintEnd_toEndOf="@id/guideNewTaskEnd"
         app:layout_constraintStart_toStartOf="@id/guideNewTaskStart" />

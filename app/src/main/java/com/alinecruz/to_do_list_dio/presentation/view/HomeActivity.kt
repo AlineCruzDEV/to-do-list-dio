@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.alinecruz.to_do_list_dio.databinding.ActivityHomeBinding
 import com.alinecruz.to_do_list_dio.datasource.TaskDataSource
 import com.alinecruz.to_do_list_dio.presentation.view.adapter.TaskAdapter
@@ -45,13 +46,18 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK){
+        if (requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) {
             updateListAdapter()
         }
     }
 
     private fun updateListAdapter() {
-        adapter.submitList(TaskDataSource.getList())
+        val listTasks = TaskDataSource.getList()
+
+        binding.includeHomeEmpty.constraintHomeItemEmpty.visibility =
+            if (listTasks.isEmpty()) View.VISIBLE else View.GONE
+
+        adapter.submitList(listTasks)
     }
 
     private fun setupRecycler() {

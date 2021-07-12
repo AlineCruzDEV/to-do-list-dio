@@ -2,6 +2,7 @@
     <string name="app_name">My Tasks</string>
     <string name="label_splash_what_do_first">Por onde devo começar?</string>
     <string name="message_splash_description_image">Desenho de uma pessoa com uma caneta em frente à uma prancheta com tarefas</string>
+    <string name="message_home_empty_description_image">Desenho de uma pessoa pensativa em frente à um quadro vazio</string>
     <string name="label_home_title">Tarefas</string>
     <string name="label_all_lorem_ipsum">Lorem Ipsum</string>
     <string name="label_sample_data_hour">00/00/0000 00:00</string>
@@ -17,4 +18,5 @@
     <string name="label_all_edit">Editar</string>
     <string name="label_all_delete">Deletar</string>
     <string name="label_all_update_task">Atualizar Tarefa</string>
+    <string name="label_home_empty_nothing_here">Ops! Nada por aqui...</string>
 </resources>

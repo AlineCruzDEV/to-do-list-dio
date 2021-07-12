@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/dimen_8dp"
-    app:cardElevation="@dimen/dimen_4dp"
-    app:cardCornerRadius="@dimen/dimen_8dp">
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardElevation="@dimen/dimen_4dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintHomeItemTask"
@@ -35,11 +35,11 @@
             android:id="@+id/imageHomeItemTaskOptions"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/message_item_task_menu_description"
             android:src="@drawable/ic_item_task_menu"
-            android:contentDescription="@string/message_item_task_menu_description"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

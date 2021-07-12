@@ -16,9 +16,10 @@ import java.util.*
 
 class NewTaskActivity : AppCompatActivity() {
 
-    companion object{
+    companion object {
         const val ID_TASK = "id_task"
     }
+
     private lateinit var binding: ActivityNewTaskBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +27,7 @@ class NewTaskActivity : AppCompatActivity() {
         binding = ActivityNewTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if(intent.hasExtra(ID_TASK)) {
+        if (intent.hasExtra(ID_TASK)) {
             val idNewTask = intent.getIntExtra(ID_TASK, 0)
             TaskDataSource.findById(idNewTask)?.let {
                 binding.inputLytNewTaskTitle.text = it.title.toString()
@@ -69,8 +70,10 @@ class NewTaskActivity : AppCompatActivity() {
                 .build()
 
             timePicker.addOnPositiveButtonClickListener {
-                val minute : String = if (timePicker.minute in 0..9) "0${timePicker.minute}" else timePicker.minute.toString()
-                val hour : String = if (timePicker.hour in 0..9) "0${timePicker.hour}" else timePicker.hour.toString()
+                val minute: String =
+                    if (timePicker.minute in 0..9) "0${timePicker.minute}" else timePicker.minute.toString()
+                val hour: String =
+                    if (timePicker.hour in 0..9) "0${timePicker.hour}" else timePicker.hour.toString()
 
                 binding.inputLytNewTaskHour.text = "$hour:$minute"
             }
