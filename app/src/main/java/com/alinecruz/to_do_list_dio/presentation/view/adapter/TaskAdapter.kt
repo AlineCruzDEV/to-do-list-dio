@@ -3,13 +3,18 @@ package com.alinecruz.to_do_list_dio.presentation.view.adapter
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.PopupMenu
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.alinecruz.to_do_list_dio.R
 import com.alinecruz.to_do_list_dio.databinding.ItemHomeTaskBinding
 import com.alinecruz.to_do_list_dio.domain.entities.Task
 
-class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
+class TaskAdapter : ListAdapter<Task, TaskAdapter.TaskViewHolder>(DiffCallback()) {
 
-    var tasksList = mutableListOf<Task>()
+    var listenerEdit : (Task) -> Unit = {}
+    var listenerDelete : (Task) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -17,14 +22,11 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
         return TaskViewHolder(binding)
     }
 
-    override fun getItemCount() = tasksList.size
-
     override fun onBindViewHolder(holder: TaskViewHolder, position: Int) {
-        val currentTask = tasksList[position]
-        holder.bind(currentTask)
+        holder.bind(getItem(position))
     }
 
-    class TaskViewHolder(private val binding: ItemHomeTaskBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class TaskViewHolder(private val binding: ItemHomeTaskBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(currentTask: Task) {
             binding.textHomeItemTaskTitle.text = currentTask.title
@@ -32,7 +34,28 @@ class TaskAdapter() : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
             binding.constraintHomeItemTask.setOnClickListener {
                 Log.e("TASK ADAPTER", "Clicou ${currentTask.description}")
             }
+            binding.imageHomeItemTaskOptions.setOnClickListener {
+                showOptions(currentTask)
+            }
         }
 
+        private fun showOptions(currentTask: Task) {
+            val imageOptions = binding.imageHomeItemTaskOptions
+            val popupOptions = PopupMenu(imageOptions.context, imageOptions)
+            popupOptions.menuInflater.inflate(R.menu.popup_item_task_menu, popupOptions.menu)
+            popupOptions.setOnMenuItemClickListener {
+                when(it.itemId) {
+                    R.id.itemTaskMenuEdit -> listenerEdit(currentTask)
+                    R.id.itemTaskMenuDelete -> listenerDelete(currentTask)
+                }
+                return@setOnMenuItemClickListener true
+            }
+            popupOptions.show()
+        }
     }
+}
+
+class DiffCallback : DiffUtil.ItemCallback<Task>() {
+    override fun areItemsTheSame(oldItem: Task, newItem: Task): Boolean = oldItem == newItem
+    override fun areContentsTheSame(oldItem: Task, newItem: Task): Boolean = oldItem.id == newItem.id
 }
