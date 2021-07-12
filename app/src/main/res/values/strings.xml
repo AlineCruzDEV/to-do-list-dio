@@ -6,4 +6,12 @@
     <string name="label_all_lorem_ipsum">Lorem Ipsum</string>
     <string name="label_sample_data_hour">00/00/0000 00:00</string>
     <string name="label_home_fab_add_task">Adicionar Tarefa</string>
+    <string name="message_item_task_menu_description">Opções de Tarefa</string>
+    <string name="label_new_task">Nova Tarefa</string>
+    <string name="label_new_task_title">Título</string>
+    <string name="label_new_task_description">Descrição</string>
+    <string name="label_new_task_sample_hour">00:00</string>
+    <string name="label_new_task_sample_date">00/00/0000</string>
+    <string name="label_all_cancel">Cancelar</string>
+    <string name="label_new_task_create">Criar Tarefa</string>
 </resources>

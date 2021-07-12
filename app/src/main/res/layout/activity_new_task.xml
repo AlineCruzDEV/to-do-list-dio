@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.NewTaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarNewTask"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarNewTask"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextColor="@color/white"
+            app:title="@string/label_new_task"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNewTaskStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dimen_32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideNewTaskEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dimen_32dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytNewTaskTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:hint="@string/label_new_task_title"
+        app:layout_constraintEnd_toEndOf="@id/guideNewTaskEnd"
+        app:layout_constraintStart_toStartOf="@id/guideNewTaskStart"
+        app:layout_constraintTop_toBottomOf="@id/appBarNewTask">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEdtNewTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytNewTaskDescription"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:hint="@string/label_new_task_description"
+        app:layout_constraintEnd_toEndOf="@id/guideNewTaskEnd"
+        app:layout_constraintStart_toStartOf="@id/guideNewTaskStart"
+        app:layout_constraintTop_toBottomOf="@id/inputLytNewTaskTitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEdtNewTaskDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytNewTaskDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        android:hint="@string/label_new_task_sample_date"
+        app:layout_constraintEnd_toStartOf="@id/inputLytNewTaskHour"
+        app:layout_constraintStart_toStartOf="@id/guideNewTaskStart"
+        app:layout_constraintTop_toBottomOf="@id/inputLytNewTaskDescription"
+        app:startIconDrawable="@drawable/ic_new_task_calendar">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEdtNewTaskDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLytNewTaskHour"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/label_new_task_sample_hour"
+        app:layout_constraintEnd_toEndOf="@id/guideNewTaskEnd"
+        app:layout_constraintStart_toEndOf="@id/inputLytNewTaskDate"
+        app:layout_constraintTop_toTopOf="@id/inputLytNewTaskDate"
+        app:startIconDrawable="@drawable/ic_new_task_hour">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEdtNewTaskHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNewTaskCancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_all_cancel"
+        android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonNewTaskCreate"
+        app:layout_constraintEnd_toEndOf="@id/guideNewTaskEnd"
+        app:layout_constraintStart_toStartOf="@id/guideNewTaskStart" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonNewTaskCreate"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_16dp"
+        android:text="@string/label_new_task_create"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideNewTaskEnd"
+        app:layout_constraintStart_toStartOf="@id/guideNewTaskStart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

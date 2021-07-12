@@ -1,3 +1,5 @@
 package com.alinecruz.to_do_list_dio.domain.entities
 
-data class Task(val title: String, val description: String, val date: String, val hour: String)
+import android.text.Editable
+
+data class Task(val id: Int = 0, val title: Editable?, val description: Editable?, val date: Editable?, val hour: Editable?)
