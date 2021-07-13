@@ -1,4 +1,4 @@
-package com.alinecruz.to_do_list_dio
+package com.alinecruz.to_do_list_dio.presentation.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

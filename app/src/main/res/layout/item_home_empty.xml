@@ -1,35 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintHomeItemEmpty"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/redBackground"
-    tools:context=".presentation.view.SplashActivity">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textSplashTitle"
-        style="@style/titleSplah"
+        android:id="@+id/textHomeItemEmpty"
+        style="@style/titleItemEmpty"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dimen_24dp"
-        android:layout_marginTop="@dimen/dimen_64dp"
-        android:layout_marginEnd="@dimen/dimen_24dp"
-        android:gravity="center"
-        android:text="@string/label_splash_what_do_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageSplash"
-        android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="@dimen/dimen_0dp"
-        android:layout_marginTop="@dimen/dimen_64dp"
-        android:contentDescription="@string/message_splash_description_image"
-        android:src="@drawable/image_splash_to_do"
+        android:text="@string/label_home_empty_nothing_here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/imageHomeItemEmpty"
+        android:layout_width="@dimen/dimen_0dp"
+        android:layout_height="@dimen/dimen_0dp"
+        android:contentDescription="@string/message_splash_description_image"
+        android:src="@drawable/image_home_empty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHomeItemEmpty" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
