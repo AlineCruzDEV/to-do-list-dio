@@ -1,7 +1,10 @@
 # My Tasks
 ### Desafio da DIO (Digital Inovation One). Trata-se de um app no estilo "To Do List".
 
-Para sugestões ou dúvidas, me acione no LinkedIN: https://www.linkedin.com/in/linecruz/. Thanks!
+Para sugestões ou dúvidas, me acione em <a href="https://www.linkedin.com/in/linecruz/">LinkedIN Aline Cruz</a>. Obrigada!
+
+*<a href="https://storyset.com/work">Imagens do site Storyset</a>
+
 
 Seguem imagens do app:
 
