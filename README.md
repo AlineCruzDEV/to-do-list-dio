@@ -3,7 +3,7 @@
 
 Para sugestões ou dúvidas, me acione em <a href="https://www.linkedin.com/in/linecruz/">LinkedIN Aline Cruz</a>. Obrigada!
 
-*<a href="https://storyset.com/work">Imagens do site Storyset</a>
+*Imagens utilizadas dos sites: <a href="https://storyset.com/work">Storyset</a> e <a href="https://lottiefiles.com">LottieFiles</a>
 
 
 Seguem imagens do app:
