@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         scope.launch {
-            delay(2000)
+            delay(3000)
             val intent = Intent(application, HomeActivity::class.java)
             startActivity(intent)
             finish()
